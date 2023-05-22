@@ -19,3 +19,73 @@ input[type="submit"] {
     margin-top: 10px;
     font-size: 16px;
 }
+
+/* Estilos para el título */
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilos para el contenedor de búsqueda */
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para el contenedor de películas */
+  .movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Estilos para las tarjetas de películas */
+  .card {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+  .card-img {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-info {
+    flex-grow: 1;
+  }
+  
+  .card-info h3 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  .card-info p {
+    margin: 5px 0;
+  }
+  
+  .card-info button {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
