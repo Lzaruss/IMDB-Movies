@@ -2,6 +2,11 @@
 
 This repository contains a web application that allows users to search for movies and retrieve their corresponding details using the 2embed.to API. The website provides a user-friendly interface where users can enter the name of a movie they are interested in, and the application will fetch the movie details using the API.
 
+## Important
+To use this application, you will need to use a browser extension that enables CORS policies, such as the one shown in the image below. Otherwise, the page will not function properly.
+![Extension CORS](corsExtension.png)
+
+
 ## Features
 - **Movie Search**: Users can search for movies by entering the title of the movie they want to find.
 - **API Integration**: The application integrates with the 2embed.to API to retrieve movie details, such as the title, release date, genre, and synopsis.
