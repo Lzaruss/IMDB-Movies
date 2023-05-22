@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prueba de GitHub Pages</title>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        
+        input[type="text"] {
+            width: 300px;
+            height: 30px;
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        input[type="submit"] {
+            height: 30px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-  <h1>¡Hola, GitHub Pages!</h1>
-  <p>Esta es una página de prueba para verificar si GitHub Pages funciona correctamente.</p>
+    <h1>Movie Search</h1>
+    <form>
+        <input type="text" id="movieInput" placeholder="Enter movie title">
+        <br>
+        <input type="submit" value="Search">
+    </form>
+    
+    <script>
+        // JavaScript code for handling the movie search functionality
+        
+        // Add an event listener to the form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get the entered movie title from the input field
+            var movieTitle = document.getElementById('movieInput').value;
+            
+            // Perform the movie search using the entered title
+            searchMovie(movieTitle);
+        });
+        
+        // Function to search for a movie
+        function searchMovie(title) {
+            // Perform the necessary API call or action here
+            // Replace this code with your actual movie search logic
+            
+            // For demonstration purposes, we'll just log the title to the console
+            console.log('Searching for movie: ' + title);
+        }
+    </script>
 </body>
 </html>
