@@ -5,20 +5,22 @@ function searchMovie(input) {
     fetch(apiURL).then((res) => res.json()).then((data) => {
         let output = "";
         data.d.forEach((movie) => {
-            output += `
-                <div class="card">
-                    <div class="card-img">
-                        <img src="${movie.i.imageUrl}" alt="${movie.l}">
+            if (movie.id.startsWith("tt")){
+                output += `
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="${movie.i.imageUrl}" alt="${movie.l}">
+                        </div>
+                        <div class="card-info">
+                            <h3>${movie.l}</h3>
+                            <p>${movie.s}</p>
+                            <p>${movie.y}</p>
+                            <p>${movie.id}</p>
+                            <button onclick="showMovie('${movie.id}')">View Movie</button>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>${movie.l}</h3>
-                        <p>${movie.s}</p>
-                        <p>${movie.y}</p>
-                        <p>${movie.id}</p>
-                        <button onclick="showMovie('${movie.id}')">View Movie</button>
-                    </div>
-                </div>
-            `;
+                `;
+            }
         });
 
         document.getElementById("movies").innerHTML = output;
@@ -39,7 +41,7 @@ function showMovie(id){
         `;
         console.log(data.url)
         document.getElementById("movie").innerHTML = output;
-    }).catch((err) => {
-        console.log(err);
+    }).catch(() => {
+        location.reload();
     });
 }
