@@ -39,9 +39,8 @@ function showMovie(id){
                 <iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>
             </div>
         `;
-        console.log(data.url)
         document.getElementById("movie").innerHTML = output;
-    }).catch(() => {
-        location.reload();
+    }).catch((err) => {
+        console.log(err)
     });
 }
