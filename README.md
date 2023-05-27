@@ -6,6 +6,8 @@ This repository contains a web application that allows users to search for movie
 To use this application, you will need to use a browser extension that enables CORS policies, such as the one shown in the image below. Otherwise, the page will not function properly.
 ![Extension CORS](img/corsExtension.png)
 
+I have noticed that if you do not have an extension that forces the page to load with https, such as "HTTPS Everywhere", it will not load the iframe of the movie, so I have added the url where you can see the movie.
+
 ## Example
 This is an example where we search for the movie "Avengers" with the extension activated. We click on the "View Movie" button, and the movie will appear below, where we can enjoy it peacefully.
 ![Example](img/example.PNG)
