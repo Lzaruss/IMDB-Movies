@@ -34,12 +34,15 @@ movieInput.addEventListener("keyup", (e) => {
 function showMovie(id){
     const apiURL = `https://2embed.to/embed/imdb/movie?id=${id}`;
     fetch(apiURL).then((data) => {
+        let p = `<p>${apiURL}</p>`;
         let output = `
             <div class="movie">
                 <iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>
             </div>
         `;
         document.getElementById("movie").innerHTML = output;
+        document.getElementById("urlMovie").href = apiURL;
+        document.getElementById("urlMovie").innerHTML = apiURL;
     }).catch((err) => {
         console.log(err)
     });
